@@ -22,18 +22,6 @@ class HomeCollectionViewCell: UICollectionViewCell {
         setOpaqueBackground()
     }
     
-    //    func setUpCell (urlString : String) {
-    //        DispatchQueue.global(qos: .background).async {
-    //            let url = URL(string: urlString)!
-    //            let imageData = try? Data(contentsOf: url)
-    //            DispatchQueue.main.async {
-    //                self.gifuImage.animate(withGIFData: imageData!)
-    //                self.activityIndicator.stopAnimating()
-    //                self.activityIndicator.isHidden = true
-    //            }
-    //        }
-    //    }
-    
     func setUpCell (urlString : String) {
         downloadTask = gifuImage.downloadImageFromUrl(urlString, completionHandler: { (data) in
             guard let data = data else {
@@ -64,6 +52,7 @@ class HomeCollectionViewCell: UICollectionViewCell {
 private extension HomeCollectionViewCell {
     static let defaultBackgroundColor = UIColor.groupTableViewBackground
     
+    //Opaque = less processing
     func setOpaqueBackground() {
         alpha = 1.0
         backgroundColor = HomeCollectionViewCell.defaultBackgroundColor

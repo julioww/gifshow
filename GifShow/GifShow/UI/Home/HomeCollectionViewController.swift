@@ -26,11 +26,7 @@ class HomeCollectionViewController: UICollectionViewController {
         setupNextPageLoader()
     }
     
-    ////////////////////////////////////////////////////////////////
-    //MARK:-
     //MARK:Binds
-    //MARK:-
-    ////////////////////////////////////////////////////////////////
     
     private func setupCollectionViewBinding() {
         self.viewModel.dataSource.asObservable().bind(to: self.collectionView.rx.items(cellIdentifier: reusableCell, cellType: HomeCollectionViewCell.self)) { row, data, cell in
@@ -49,11 +45,8 @@ class HomeCollectionViewController: UICollectionViewController {
         loadNextPageTrigger.distinctUntilChanged().bind(to: viewModel.nextPage).disposed(by: disposeBag)
     }
     
-    ////////////////////////////////////////////////////////////////
-    //MARK:-
+
     //MARK: Helper
-    //MARK:-
-    ////////////////////////////////////////////////////////////////
     
     private func isNearTheBottomEdge(contentOffset: CGPoint, _ collectionView: UICollectionView) -> Bool {
         return contentOffset.y + (collectionView.frame.size.height * 2) > collectionView.contentSize.height
