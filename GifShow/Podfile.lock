@@ -1,5 +1,6 @@
 PODS:
   - Alamofire (4.8.0)
+  - Gifu (3.2.0)
   - RxAtomic (4.4.0)
   - RxBlocking (4.4.0):
     - RxAtomic (~> 4.4)
@@ -15,6 +16,7 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire (~> 4.2)
+  - Gifu
   - RxBlocking (~> 4.0)
   - RxCocoa (~> 4.0)
   - RxSwift (~> 4.0)
@@ -24,6 +26,7 @@ DEPENDENCIES:
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
+    - Gifu
     - RxAtomic
     - RxBlocking
     - RxCocoa
@@ -33,6 +36,7 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   Alamofire: 3ec537f71edc9804815215393ae2b1a8ea33a844
+  Gifu: 7bcb6427457d85e0b4dff5a84ec5947ac19a93ea
   RxAtomic: eacf60db868c96bfd63320e28619fe29c179656f
   RxBlocking: 138ad53217434444d6eeeb4fb406a45431d92e31
   RxCocoa: df63ebf7b9a70d6b4eeea407ed5dd4efc8979749
@@ -40,6 +44,6 @@ SPEC CHECKSUMS:
   RxTest: 19d03286bdc0a3aaea5d61d4cde31fdf4bb8a5ba
   SwiftyJSON: c4bcba26dd9ec7a027fc8eade48e2c911f229e96
 
-PODFILE CHECKSUM: 3549a87086284b5965418466a29f14fd90cff7ca
+PODFILE CHECKSUM: 5d9b62b0bf7302fb07105dd52a396c1838e5e910
 
 COCOAPODS: 1.5.2

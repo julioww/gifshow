@@ -15,7 +15,9 @@ class HomeBuilder: AppBuilder {
     func main() -> UIViewController {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let viewController = storyboard.instantiateViewController(withIdentifier: "HomeCollectionView") as! HomeCollectionViewController
-        //inject the dependecies
+        let interactor : HomeInteractorProtocol = HomeInteractor(with: networkService)
+        let viewModel : HomeViewModelProtocol = HomeViewModel(with: interactor)
+        viewController.viewModel = viewModel
         return viewController
     }
 }

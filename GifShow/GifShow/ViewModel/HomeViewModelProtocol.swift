@@ -12,6 +12,7 @@ import RxSwift
 
 protocol HomeViewModelProtocol {
     var dataSource: Variable<[Gif]> { get }
+    var nextPage: PublishSubject<CGPoint> { get }
     
     init (with interactor: HomeInteractorProtocol)
 }

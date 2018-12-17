@@ -10,6 +10,7 @@ target 'GifShow' do
   pod 'Alamofire', '~>  4.2'
   pod 'RxSwift',    '~> 4.0'
   pod 'RxCocoa',    '~> 4.0'
+  pod 'Gifu'
 
   target 'GifShowTests' do
     inherit! :search_paths

@@ -5,6 +5,7 @@
     </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -64,6 +65,43 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5el-UY-NQp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="198" y="-146"/>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="lKE-Cr-Gze">
+            <objects>
+                <viewController storyboardIdentifier="DetailView" id="G6g-hf-ah9" customClass="DetailViewController" customModule="GifShow" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ZQz-0t-Yea">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="MAW-DP-wY8">
+                                <rect key="frame" x="169" y="325" width="37" height="37"/>
+                            </activityIndicatorView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6Jc-2N-a0c">
+                                <rect key="frame" x="0.0" y="212" width="375" height="263"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="6Jc-2N-a0c" secondAttribute="height" multiplier="375:263" id="xK0-oR-PPk"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.12597150259067358" green="0.12597150259067358" blue="0.12597150259067358" alpha="0.85181007922535212" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" red="0.12507290737139662" green="0.12169924655400269" blue="0.12576910621761661" alpha="0.84705882352941175" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Jc-2N-a0c" firstAttribute="leading" secondItem="uKh-4g-fwK" secondAttribute="leading" id="9gv-AU-PUi"/>
+                            <constraint firstItem="MAW-DP-wY8" firstAttribute="centerY" secondItem="uKh-4g-fwK" secondAttribute="centerY" id="RlE-4P-d4A"/>
+                            <constraint firstAttribute="trailing" secondItem="6Jc-2N-a0c" secondAttribute="trailing" id="mKI-Q1-Y5b"/>
+                            <constraint firstItem="6Jc-2N-a0c" firstAttribute="centerY" secondItem="uKh-4g-fwK" secondAttribute="centerY" id="u5l-rX-5Oo"/>
+                            <constraint firstItem="MAW-DP-wY8" firstAttribute="centerX" secondItem="uKh-4g-fwK" secondAttribute="centerX" id="yfc-sY-Ono"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="uKh-4g-fwK"/>
+                    </view>
+                    <connections>
+                        <outlet property="detailImage" destination="6Jc-2N-a0c" id="XOQ-mR-tjK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6sd-xL-GOC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="976.79999999999995" y="-148.87556221889056"/>
         </scene>
     </scenes>
 </document>

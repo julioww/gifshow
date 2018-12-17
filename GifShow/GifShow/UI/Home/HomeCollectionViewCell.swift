@@ -8,14 +8,66 @@
 
 import Foundation
 import UIKit
+import Gifu
 
 class HomeCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var gifuImage : UIImageView!
     @IBOutlet weak var activityIndicator : UIActivityIndicatorView!
     
-    func setUpCell(urlString: String) {
-        //download image and set
+    fileprivate var downloadTask: URLSessionDataTask?
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        setOpaqueBackground()
     }
     
+    //    func setUpCell (urlString : String) {
+    //        DispatchQueue.global(qos: .background).async {
+    //            let url = URL(string: urlString)!
+    //            let imageData = try? Data(contentsOf: url)
+    //            DispatchQueue.main.async {
+    //                self.gifuImage.animate(withGIFData: imageData!)
+    //                self.activityIndicator.stopAnimating()
+    //                self.activityIndicator.isHidden = true
+    //            }
+    //        }
+    //    }
+    
+    func setUpCell (urlString : String) {
+        downloadTask = gifuImage.downloadImageFromUrl(urlString, completionHandler: { (data) in
+            guard let data = data else {
+                return
+            }
+            DispatchQueue.main.async {
+                self.gifuImage.animate(withGIFData: data)
+                self.activityIndicator.stopAnimating()
+                self.activityIndicator.isHidden = true
+            }
+        })
+    }
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        downloadTask?.cancel()
+        resetViewCell()
+        gifuImage.prepareForReuse()
+    }
+    
+    func resetViewCell() {
+        gifuImage.image = nil
+        self.activityIndicator.isHidden = false
+        activityIndicator.startAnimating()
+    }
+}
+
+private extension HomeCollectionViewCell {
+    static let defaultBackgroundColor = UIColor.groupTableViewBackground
+    
+    func setOpaqueBackground() {
+        alpha = 1.0
+        backgroundColor = HomeCollectionViewCell.defaultBackgroundColor
+        gifuImage.alpha = 1.0
+        gifuImage.backgroundColor = HomeCollectionViewCell.defaultBackgroundColor
+    }
 }

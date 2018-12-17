@@ -8,13 +8,54 @@
 
 import Foundation
 import UIKit
+import RxSwift
+import RxCocoa
 
 class HomeCollectionViewController: UICollectionViewController {
     
-    let reuseIdentifier = "GifCell"
-    let itemsPerRow: CGFloat = 4
+    let reusableCell = "GifCell"
+    var itemsPerRow: CGFloat = 4
+    var viewModel: HomeViewModelProtocol!
+    private let disposeBag = DisposeBag()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.collectionView.dataSource = nil
+        self.collectionView.setContentOffset(collectionView.contentOffset, animated: false)
+        setupCollectionViewBinding()
+        setupNextPageLoader()
+    }
+    
+    ////////////////////////////////////////////////////////////////
+    //MARK:-
+    //MARK:Binds
+    //MARK:-
+    ////////////////////////////////////////////////////////////////
+    
+    private func setupCollectionViewBinding() {
+        self.viewModel.dataSource.asObservable().bind(to: self.collectionView.rx.items(cellIdentifier: reusableCell, cellType: HomeCollectionViewCell.self)) { row, data, cell in
+            cell.setUpCell(urlString: data.urlPreview!)
+            }.disposed(by: disposeBag)
+    }
+    
+    private func setupNextPageLoader() {
+        let loadNextPageTrigger = collectionView.rx.contentOffset
+            .flatMap({ [weak self] offset -> Observable<CGPoint> in
+                self!.isNearTheBottomEdge(contentOffset: offset, self!.collectionView)
+                    ? Observable.just(offset)
+                    : Observable.empty()
+            })
+        
+        loadNextPageTrigger.distinctUntilChanged().bind(to: viewModel.nextPage).disposed(by: disposeBag)
+    }
+    
+    ////////////////////////////////////////////////////////////////
+    //MARK:-
+    //MARK: Helper
+    //MARK:-
+    ////////////////////////////////////////////////////////////////
+    
+    private func isNearTheBottomEdge(contentOffset: CGPoint, _ collectionView: UICollectionView) -> Bool {
+        return contentOffset.y + (collectionView.frame.size.height * 2) > collectionView.contentSize.height
     }
 }

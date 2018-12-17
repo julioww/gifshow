@@ -9,27 +9,31 @@
 import Foundation
 import UIKit
 
-extension HomeCollectionViewController: UICollectionViewDelegateFlowLayout {
+extension HomeCollectionViewController : UICollectionViewDelegateFlowLayout{
     
-    //MARK: UICollectionView Delegate/Datasource
-    
-    override func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 1
-    }
-    
-    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
-    }
+    //    override func numberOfSections(in collectionView: UICollectionView) -> Int {
+    //        return 1
+    //    }
+    //
+    //    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    //        return 10
+    //
+    //    }
+    //
+    //    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+    //        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "GifCell", for: indexPath) as! HomeCollectionViewCell
+    //        //cell.cellImage.image = dataSourceItems[indexPath.row].image
+    //        //        print(dataSourceItems.count)
+    //        return cell
+    //    }
     
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let item = (self.viewModel.dataSource.value[indexPath.row]).urlOriginal
+        guard let url = item else {
+            return
+        }
+        self.present(DetailBuilder(urlImage: url).main(), animated: true, completion: nil)
     }
-    
-    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! HomeCollectionViewCell
-        return cell
-    }
-    
-    //MARK: UICollectionView FlowLayout Delegate
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         return UIEdgeInsets(top: 5, left: 5, bottom: 5, right: 5)
@@ -46,4 +50,5 @@ extension HomeCollectionViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
         return 5
     }
+    
 }
