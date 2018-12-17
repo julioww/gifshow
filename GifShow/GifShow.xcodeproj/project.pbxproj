@@ -44,6 +44,7 @@
 		554E2E3421C81158005F4E15 /* DetailViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554E2E3321C81158005F4E15 /* DetailViewControllerTest.swift */; };
 		554E2E3621C8119E005F4E15 /* HomeInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554E2E3521C8119E005F4E15 /* HomeInteractorTests.swift */; };
 		554E2E3821C8129F005F4E15 /* DetailViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554E2E3721C8129F005F4E15 /* DetailViewModelTests.swift */; };
+		554E2E3E21C840B2005F4E15 /* GifModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554E2E3D21C840B2005F4E15 /* GifModelTests.swift */; };
 		B8D5761CFE2777776F522900 /* Pods_GifShowUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91BF64D7F3B346F4CBD8C0B2 /* Pods_GifShowUITests.framework */; };
 		E74363472B0FBDB269CB7187 /* Pods_GifShowTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7703F26E66C9AA3A2861BE68 /* Pods_GifShowTests.framework */; };
 /* End PBXBuildFile section */
@@ -113,6 +114,7 @@
 		554E2E3321C81158005F4E15 /* DetailViewControllerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewControllerTest.swift; sourceTree = "<group>"; };
 		554E2E3521C8119E005F4E15 /* HomeInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractorTests.swift; sourceTree = "<group>"; };
 		554E2E3721C8129F005F4E15 /* DetailViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModelTests.swift; sourceTree = "<group>"; };
+		554E2E3D21C840B2005F4E15 /* GifModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifModelTests.swift; sourceTree = "<group>"; };
 		7703F26E66C9AA3A2861BE68 /* Pods_GifShowTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GifShowTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		91BF64D7F3B346F4CBD8C0B2 /* Pods_GifShowUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GifShowUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9592276CDD6ED38792382EF3 /* Pods_GifShow.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GifShow.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -309,6 +311,7 @@
 			isa = PBXGroup;
 			children = (
 				554E2E2921C80C70005F4E15 /* Gif+Test.swift */,
+				554E2E3D21C840B2005F4E15 /* GifModelTests.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -656,6 +659,7 @@
 				554E2E0B21C7F30A005F4E15 /* NetworkServiceStub.swift in Sources */,
 				554E2E2A21C80C70005F4E15 /* Gif+Test.swift in Sources */,
 				554E2DD421C7D02E005F4E15 /* GifShowTests.swift in Sources */,
+				554E2E3E21C840B2005F4E15 /* GifModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
