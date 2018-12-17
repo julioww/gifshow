@@ -45,6 +45,7 @@
 		554E2E3621C8119E005F4E15 /* HomeInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554E2E3521C8119E005F4E15 /* HomeInteractorTests.swift */; };
 		554E2E3821C8129F005F4E15 /* DetailViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554E2E3721C8129F005F4E15 /* DetailViewModelTests.swift */; };
 		554E2E3E21C840B2005F4E15 /* GifModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554E2E3D21C840B2005F4E15 /* GifModelTests.swift */; };
+		554E2E4121C8465E005F4E15 /* first_result.json in Resources */ = {isa = PBXBuildFile; fileRef = 554E2E4021C8465E005F4E15 /* first_result.json */; };
 		B8D5761CFE2777776F522900 /* Pods_GifShowUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91BF64D7F3B346F4CBD8C0B2 /* Pods_GifShowUITests.framework */; };
 		E74363472B0FBDB269CB7187 /* Pods_GifShowTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7703F26E66C9AA3A2861BE68 /* Pods_GifShowTests.framework */; };
 /* End PBXBuildFile section */
@@ -115,6 +116,7 @@
 		554E2E3521C8119E005F4E15 /* HomeInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractorTests.swift; sourceTree = "<group>"; };
 		554E2E3721C8129F005F4E15 /* DetailViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModelTests.swift; sourceTree = "<group>"; };
 		554E2E3D21C840B2005F4E15 /* GifModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifModelTests.swift; sourceTree = "<group>"; };
+		554E2E4021C8465E005F4E15 /* first_result.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = first_result.json; sourceTree = "<group>"; };
 		7703F26E66C9AA3A2861BE68 /* Pods_GifShowTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GifShowTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		91BF64D7F3B346F4CBD8C0B2 /* Pods_GifShowUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GifShowUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9592276CDD6ED38792382EF3 /* Pods_GifShow.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GifShow.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -193,6 +195,7 @@
 		554E2DD221C7D02E005F4E15 /* GifShowTests */ = {
 			isa = PBXGroup;
 			children = (
+				554E2E3F21C844C5005F4E15 /* JsonStubs */,
 				554E2E2821C80C46005F4E15 /* Stubs */,
 				554E2E1021C7F35F005F4E15 /* Models */,
 				554E2E0F21C7F358005F4E15 /* ViewModels */,
@@ -352,6 +355,14 @@
 			path = Stubs;
 			sourceTree = "<group>";
 		};
+		554E2E3F21C844C5005F4E15 /* JsonStubs */ = {
+			isa = PBXGroup;
+			children = (
+				554E2E4021C8465E005F4E15 /* first_result.json */,
+			);
+			path = JsonStubs;
+			sourceTree = "<group>";
+		};
 		BBA8B01FC8C2DEF87D477D01 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -494,6 +505,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				554E2E4121C8465E005F4E15 /* first_result.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
