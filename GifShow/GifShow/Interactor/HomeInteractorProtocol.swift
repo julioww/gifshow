@@ -9,7 +9,7 @@
 import Foundation
 import RxSwift
 
-protocol HomeInteractor {
+protocol HomeInteractorProtocol {
     var networkService: NetworkServiceProtocol! { get }
     init (with service: NetworkServiceProtocol)
     
