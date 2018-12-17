@@ -22,6 +22,12 @@ class NetworkService: NetworkServiceProtocol {
         
         return Observable<OUT>.create { (observer) -> Disposable in
             
+            guard Reachability.isConnectedToInternet() else {
+                observer.onError(APIError.noConnection)
+                observer.onCompleted()
+                return Disposables.create()
+            }
+            
             let requestReference = Alamofire.request(endpoint.url, method: endpoint.method, parameters: endpoint.params)
                 .validate()
                 .responseJSON(completionHandler: { (response) in

@@ -25,6 +25,7 @@
 		554E2E0021C7E0AA005F4E15 /* HomeInteractorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554E2DFF21C7E0AA005F4E15 /* HomeInteractorProtocol.swift */; };
 		554E2E0221C7E17D005F4E15 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554E2E0121C7E17D005F4E15 /* NetworkService.swift */; };
 		554E2E0421C7E2B2005F4E15 /* APIEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554E2E0321C7E2B2005F4E15 /* APIEndPoint.swift */; };
+		554E2E0621C7E536005F4E15 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554E2E0521C7E536005F4E15 /* Reachability.swift */; };
 		B8D5761CFE2777776F522900 /* Pods_GifShowUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91BF64D7F3B346F4CBD8C0B2 /* Pods_GifShowUITests.framework */; };
 		E74363472B0FBDB269CB7187 /* Pods_GifShowTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7703F26E66C9AA3A2861BE68 /* Pods_GifShowTests.framework */; };
 /* End PBXBuildFile section */
@@ -73,6 +74,7 @@
 		554E2DFF21C7E0AA005F4E15 /* HomeInteractorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractorProtocol.swift; sourceTree = "<group>"; };
 		554E2E0121C7E17D005F4E15 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		554E2E0321C7E2B2005F4E15 /* APIEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIEndPoint.swift; sourceTree = "<group>"; };
+		554E2E0521C7E536005F4E15 /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		7703F26E66C9AA3A2861BE68 /* Pods_GifShowTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GifShowTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		91BF64D7F3B346F4CBD8C0B2 /* Pods_GifShowUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GifShowUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9592276CDD6ED38792382EF3 /* Pods_GifShow.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GifShow.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -187,6 +189,7 @@
 				554E2DFC21C7DE78005F4E15 /* NetworkConstants.swift */,
 				554E2E0121C7E17D005F4E15 /* NetworkService.swift */,
 				554E2E0321C7E2B2005F4E15 /* APIEndPoint.swift */,
+				554E2E0521C7E536005F4E15 /* Reachability.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -481,6 +484,7 @@
 				554E2DFB21C7DCCC005F4E15 /* Gif.swift in Sources */,
 				554E2E0221C7E17D005F4E15 /* NetworkService.swift in Sources */,
 				554E2DBF21C7D02C005F4E15 /* AppDelegate.swift in Sources */,
+				554E2E0621C7E536005F4E15 /* Reachability.swift in Sources */,
 				554E2E0021C7E0AA005F4E15 /* HomeInteractorProtocol.swift in Sources */,
 				554E2DEE21C7D1C7005F4E15 /* HomeCollectionViewController.swift in Sources */,
 				554E2DF521C7D66E005F4E15 /* HomeCollectionViewCell.swift in Sources */,
