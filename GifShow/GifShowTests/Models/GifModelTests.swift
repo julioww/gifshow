@@ -9,6 +9,7 @@
 import Foundation
 import XCTest
 import SwiftyJSON
+@testable import GifShow
 
 class GifModelTests: XCTestCase {
     
