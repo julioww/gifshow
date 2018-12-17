@@ -3,7 +3,7 @@ Gifshow
 Endless grid with trending gifs using Giphy API
 
 ## Architecture
-I tried to not follow any specific architecture, I adapted the __MVVM__ architecture to the project needs, using also: Builders, Interactors.
+I tried to not follow any specific architecture, I adapted the __MVVM__ architecture to the project needs, using also: Builders and Interactors.
 
 ## To run 
 - clone the repo and install the pods
