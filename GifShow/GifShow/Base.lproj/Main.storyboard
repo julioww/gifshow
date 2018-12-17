@@ -5,6 +5,65 @@
     </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <scenes/>
+    <scenes>
+        <!--Home Collection View Controller-->
+        <scene sceneID="8WB-PW-3jB">
+            <objects>
+                <collectionViewController storyboardIdentifier="HomeCollectionView" id="ifK-05-htt" customClass="HomeCollectionViewController" customModule="GifShow" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="iUH-BG-rFn">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="BB7-Wv-1Lq">
+                            <size key="itemSize" width="50" height="50"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="GifCell" id="BRD-Yp-Fh6" customClass="HomeCollectionViewCell" customModule="GifShow" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bzp-AH-nXo">
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        </imageView>
+                                        <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="o0U-8g-bPV">
+                                            <rect key="frame" x="15" y="15" width="20" height="20"/>
+                                        </activityIndicatorView>
+                                    </subviews>
+                                </view>
+                                <constraints>
+                                    <constraint firstItem="bzp-AH-nXo" firstAttribute="top" secondItem="BRD-Yp-Fh6" secondAttribute="top" id="2E1-8s-xKh"/>
+                                    <constraint firstAttribute="trailing" secondItem="bzp-AH-nXo" secondAttribute="trailing" id="5uo-cK-jtQ"/>
+                                    <constraint firstAttribute="bottom" secondItem="bzp-AH-nXo" secondAttribute="bottom" id="AMT-ca-BVN"/>
+                                    <constraint firstItem="o0U-8g-bPV" firstAttribute="centerX" secondItem="bzp-AH-nXo" secondAttribute="centerX" id="Hoi-7w-NjC"/>
+                                    <constraint firstItem="bzp-AH-nXo" firstAttribute="leading" secondItem="BRD-Yp-Fh6" secondAttribute="leading" id="ojK-y9-Yp7"/>
+                                    <constraint firstItem="o0U-8g-bPV" firstAttribute="centerY" secondItem="bzp-AH-nXo" secondAttribute="centerY" id="wwc-Kw-Bat"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="activityIndicator" destination="o0U-8g-bPV" id="yUi-4F-uqL"/>
+                                    <outlet property="gifuImage" destination="bzp-AH-nXo" id="sFq-Gn-Ju4"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="ifK-05-htt" id="ezp-DA-PeC"/>
+                            <outlet property="delegate" destination="ifK-05-htt" id="6cb-gf-If5"/>
+                        </connections>
+                    </collectionView>
+                    <connections>
+                        <outlet property="collectionView" destination="iUH-BG-rFn" id="Hrf-Ch-AIL"/>
+                    </connections>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5el-UY-NQp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="198" y="-146"/>
+        </scene>
+    </scenes>
 </document>
