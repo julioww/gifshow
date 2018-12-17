@@ -24,7 +24,7 @@ class GifModelTests: XCTestCase {
         return json
     }
     
-    func testGif() {
+    func testGifResult() {
         let json = getJsonFromFile(resource: "first_result", ext: "json")
         let itemsPerpage = json!["pagination"]["count"]
         var mocks:[Gif] = []
@@ -33,5 +33,12 @@ class GifModelTests: XCTestCase {
         }
         
         XCTAssertEqual(mocks.count, itemsPerpage.intValue)
+    }
+    func testGif() {
+        let json = getJsonFromFile(resource: "first_result", ext: "json")
+        let gif = Gif(json: json!["data"].arrayValue.first!)
+        
+        XCTAssertEqual(gif.urlPreview, "https://media0.giphy.com/media/wsVRNyv9yo18LkW5Y9/giphy-preview.gif")
+        XCTAssertEqual(gif.urlOriginal, "https://media0.giphy.com/media/wsVRNyv9yo18LkW5Y9/giphy.gif")
     }
 }
