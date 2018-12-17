@@ -30,6 +30,8 @@
 		554E2E0B21C7F30A005F4E15 /* NetworkServiceStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554E2E0A21C7F30A005F4E15 /* NetworkServiceStub.swift */; };
 		554E2E1221C7F46E005F4E15 /* AppBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554E2E1121C7F46E005F4E15 /* AppBuilder.swift */; };
 		554E2E1421C7F511005F4E15 /* HomeBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554E2E1321C7F511005F4E15 /* HomeBuilder.swift */; };
+		554E2E1721C7F965005F4E15 /* HomeViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554E2E1621C7F965005F4E15 /* HomeViewModelProtocol.swift */; };
+		554E2E1921C7FA2A005F4E15 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554E2E1821C7FA2A005F4E15 /* HomeViewModel.swift */; };
 		B8D5761CFE2777776F522900 /* Pods_GifShowUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91BF64D7F3B346F4CBD8C0B2 /* Pods_GifShowUITests.framework */; };
 		E74363472B0FBDB269CB7187 /* Pods_GifShowTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7703F26E66C9AA3A2861BE68 /* Pods_GifShowTests.framework */; };
 /* End PBXBuildFile section */
@@ -83,6 +85,8 @@
 		554E2E0A21C7F30A005F4E15 /* NetworkServiceStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServiceStub.swift; sourceTree = "<group>"; };
 		554E2E1121C7F46E005F4E15 /* AppBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppBuilder.swift; sourceTree = "<group>"; };
 		554E2E1321C7F511005F4E15 /* HomeBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeBuilder.swift; sourceTree = "<group>"; };
+		554E2E1621C7F965005F4E15 /* HomeViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModelProtocol.swift; sourceTree = "<group>"; };
+		554E2E1821C7FA2A005F4E15 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		7703F26E66C9AA3A2861BE68 /* Pods_GifShowTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GifShowTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		91BF64D7F3B346F4CBD8C0B2 /* Pods_GifShowUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GifShowUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9592276CDD6ED38792382EF3 /* Pods_GifShow.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GifShow.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -142,6 +146,7 @@
 		554E2DBD21C7D02C005F4E15 /* GifShow */ = {
 			isa = PBXGroup;
 			children = (
+				554E2E1521C7F917005F4E15 /* ViewModel */,
 				554E2E0921C7E999005F4E15 /* Builder */,
 				554E2DFE21C7DFC0005F4E15 /* Interactor */,
 				554E2DF721C7DBC0005F4E15 /* Model */,
@@ -269,6 +274,15 @@
 			children = (
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		554E2E1521C7F917005F4E15 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				554E2E1621C7F965005F4E15 /* HomeViewModelProtocol.swift */,
+				554E2E1821C7FA2A005F4E15 /* HomeViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		BBA8B01FC8C2DEF87D477D01 /* Frameworks */ = {
@@ -537,8 +551,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				554E2E1721C7F965005F4E15 /* HomeViewModelProtocol.swift in Sources */,
 				554E2DFD21C7DE78005F4E15 /* NetworkConstants.swift in Sources */,
 				554E2E0421C7E2B2005F4E15 /* APIEndPoint.swift in Sources */,
+				554E2E1921C7FA2A005F4E15 /* HomeViewModel.swift in Sources */,
 				554E2DF921C7DBF1005F4E15 /* JSONModel.swift in Sources */,
 				554E2E0821C7E6A5005F4E15 /* HomeInteractor.swift in Sources */,
 				554E2DF221C7D2E4005F4E15 /* HomeCollectionViewController+CollectionView.swift in Sources */,
