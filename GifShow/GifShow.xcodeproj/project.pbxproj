@@ -173,10 +173,10 @@
 			isa = PBXGroup;
 			children = (
 				554E2E1A21C7FE9E005F4E15 /* Extensions */,
-				554E2E1521C7F917005F4E15 /* ViewModel */,
-				554E2E0921C7E999005F4E15 /* Builder */,
-				554E2DFE21C7DFC0005F4E15 /* Interactor */,
-				554E2DF721C7DBC0005F4E15 /* Model */,
+				554E2E1521C7F917005F4E15 /* ViewModels */,
+				554E2E0921C7E999005F4E15 /* Builders */,
+				554E2DFE21C7DFC0005F4E15 /* Interactors */,
+				554E2DF721C7DBC0005F4E15 /* Models */,
 				554E2DF621C7DBA5005F4E15 /* Network */,
 				554E2DEC21C7D185005F4E15 /* UI */,
 				554E2DBE21C7D02C005F4E15 /* AppDelegate.swift */,
@@ -191,12 +191,12 @@
 		554E2DD221C7D02E005F4E15 /* GifShowTests */ = {
 			isa = PBXGroup;
 			children = (
-				554E2E2821C80C46005F4E15 /* Stub */,
-				554E2E1021C7F35F005F4E15 /* Model */,
-				554E2E0F21C7F358005F4E15 /* ViewModel */,
-				554E2E0E21C7F34C005F4E15 /* Interactor */,
-				554E2E0D21C7F326005F4E15 /* Controller */,
-				554E2E0C21C7F310005F4E15 /* Builder */,
+				554E2E2821C80C46005F4E15 /* Stubs */,
+				554E2E1021C7F35F005F4E15 /* Models */,
+				554E2E0F21C7F358005F4E15 /* ViewModels */,
+				554E2E0E21C7F34C005F4E15 /* Interactors */,
+				554E2E0D21C7F326005F4E15 /* Controllers */,
+				554E2E0C21C7F310005F4E15 /* Builders */,
 				554E2DD321C7D02E005F4E15 /* GifShowTests.swift */,
 				554E2DD521C7D02E005F4E15 /* Info.plist */,
 			);
@@ -242,78 +242,78 @@
 			path = Network;
 			sourceTree = "<group>";
 		};
-		554E2DF721C7DBC0005F4E15 /* Model */ = {
+		554E2DF721C7DBC0005F4E15 /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				554E2DF821C7DBF1005F4E15 /* JSONModel.swift */,
 				554E2DFA21C7DCCC005F4E15 /* Gif.swift */,
 			);
-			path = Model;
+			path = Models;
 			sourceTree = "<group>";
 		};
-		554E2DFE21C7DFC0005F4E15 /* Interactor */ = {
+		554E2DFE21C7DFC0005F4E15 /* Interactors */ = {
 			isa = PBXGroup;
 			children = (
 				554E2DFF21C7E0AA005F4E15 /* HomeInteractorProtocol.swift */,
 				554E2E0721C7E6A5005F4E15 /* HomeInteractor.swift */,
 			);
-			path = Interactor;
+			path = Interactors;
 			sourceTree = "<group>";
 		};
-		554E2E0921C7E999005F4E15 /* Builder */ = {
+		554E2E0921C7E999005F4E15 /* Builders */ = {
 			isa = PBXGroup;
 			children = (
 				554E2E1121C7F46E005F4E15 /* AppBuilder.swift */,
 				554E2E1321C7F511005F4E15 /* HomeBuilder.swift */,
 				554E2E2621C805FB005F4E15 /* DetailBuilder.swift */,
 			);
-			path = Builder;
+			path = Builders;
 			sourceTree = "<group>";
 		};
-		554E2E0C21C7F310005F4E15 /* Builder */ = {
+		554E2E0C21C7F310005F4E15 /* Builders */ = {
 			isa = PBXGroup;
 			children = (
 				554E2E2D21C81022005F4E15 /* HomeBuilderTest.swift */,
 				554E2E2F21C81045005F4E15 /* DetailBuilderTest.swift */,
 			);
-			path = Builder;
+			path = Builders;
 			sourceTree = "<group>";
 		};
-		554E2E0D21C7F326005F4E15 /* Controller */ = {
+		554E2E0D21C7F326005F4E15 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
 				554E2E3121C810C6005F4E15 /* HomeCollectionViewControllerTest.swift */,
 				554E2E3321C81158005F4E15 /* DetailViewControllerTest.swift */,
 			);
-			path = Controller;
+			path = Controllers;
 			sourceTree = "<group>";
 		};
-		554E2E0E21C7F34C005F4E15 /* Interactor */ = {
+		554E2E0E21C7F34C005F4E15 /* Interactors */ = {
 			isa = PBXGroup;
 			children = (
 				554E2E3521C8119E005F4E15 /* HomeInteractorTests.swift */,
 			);
-			path = Interactor;
+			path = Interactors;
 			sourceTree = "<group>";
 		};
-		554E2E0F21C7F358005F4E15 /* ViewModel */ = {
+		554E2E0F21C7F358005F4E15 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
 				554E2E2B21C80CFA005F4E15 /* HomeViewModelTests.swift */,
 				554E2E3721C8129F005F4E15 /* DetailViewModelTests.swift */,
 			);
-			path = ViewModel;
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
-		554E2E1021C7F35F005F4E15 /* Model */ = {
+		554E2E1021C7F35F005F4E15 /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				554E2E2921C80C70005F4E15 /* Gif+Test.swift */,
 			);
-			path = Model;
+			path = Models;
 			sourceTree = "<group>";
 		};
-		554E2E1521C7F917005F4E15 /* ViewModel */ = {
+		554E2E1521C7F917005F4E15 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
 				554E2E1621C7F965005F4E15 /* HomeViewModelProtocol.swift */,
@@ -321,7 +321,7 @@
 				554E2E2221C802F2005F4E15 /* DetailViewModelProtocol.swift */,
 				554E2E2421C8038B005F4E15 /* DetailViewModel.swift */,
 			);
-			path = ViewModel;
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 		554E2E1A21C7FE9E005F4E15 /* Extensions */ = {
@@ -341,12 +341,12 @@
 			path = Detail;
 			sourceTree = "<group>";
 		};
-		554E2E2821C80C46005F4E15 /* Stub */ = {
+		554E2E2821C80C46005F4E15 /* Stubs */ = {
 			isa = PBXGroup;
 			children = (
 				554E2E0A21C7F30A005F4E15 /* NetworkServiceStub.swift */,
 			);
-			path = Stub;
+			path = Stubs;
 			sourceTree = "<group>";
 		};
 		BBA8B01FC8C2DEF87D477D01 /* Frameworks */ = {
